@@ -1,8 +1,8 @@
 extends Camera2D
 
 
-export var playerPath = NodePath()
-onready var player = get_node(playerPath)
+@export var playerPath = NodePath()
+@onready var player = get_node(playerPath)
 
 
 

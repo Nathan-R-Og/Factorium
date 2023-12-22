@@ -1,89 +1,87 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://ct54xavt35mmt"]
 
-[ext_resource path="res://Icon.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://assets/rail;.tscn" type="PackedScene" id=3]
+[ext_resource type="Script" path="res://Icon.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://wanhx57c3qk6" path="res://icon.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://co2abt44iog4m" path="res://assets/rail;.tscn" id="3"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Raisl" type="Node2D" parent="."]
 
-[node name="1" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 288, 288 )
-way = [ [ "right", "up" ], [ "down", "left" ] ]
+[node name="1" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(288, 288)
+way = [["right", "up"], ["down", "left"]]
 img = "rightup"
 
-[node name="6" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 288, 416 )
-way = [ [ "right", "up" ], [ "down", "left" ] ]
+[node name="6" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(288, 416)
+way = [["right", "up"], ["down", "left"]]
 img = "rightup"
 
-[node name="11" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 224, -224 )
-way = [ [ "right", "up" ], [ "down", "left" ] ]
+[node name="11" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(224, -224)
+way = [["right", "up"], ["down", "left"]]
 img = "rightup"
 
-[node name="2" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 288, 32 )
-way = [ [ "up", "left" ], [ "right", "down" ] ]
+[node name="2" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(288, 32)
+way = [["up", "left"], ["right", "down"]]
 img = "upleft"
 
-[node name="9" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 160, -288 )
-way = [ [ "up", "left" ], [ "right", "down" ] ]
+[node name="9" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(160, -288)
+way = [["up", "left"], ["right", "down"]]
 img = "upleft"
 
-[node name="8" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 288, -288 )
-way = [ [ "up", "left" ], [ "right", "down" ] ]
+[node name="8" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(288, -288)
+way = [["up", "left"], ["right", "down"]]
 img = "upleft"
 
-[node name="3" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 96, 288 )
-way = [ [ "left", "down" ], [ "up", "right" ] ]
+[node name="3" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(96, 288)
+way = [["left", "down"], ["up", "right"]]
 img = "leftdown"
 
-[node name="7" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 96, -288 )
-way = [ [ "left", "down" ], [ "up", "right" ] ]
+[node name="7" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(96, -288)
+way = [["left", "down"], ["up", "right"]]
 img = "leftdown"
 
-[node name="12" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 224, -288 )
-way = [ [ "left", "down" ], [ "up", "right" ] ]
+[node name="12" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(224, -288)
+way = [["left", "down"], ["up", "right"]]
 img = "leftdown"
 
-[node name="4" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 96, 32 )
-way = [ [ "down", "right" ], [ "left", "up" ] ]
+[node name="4" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(96, 32)
+way = [["down", "right"], ["left", "up"]]
 img = "downright"
 
-[node name="10" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 160, -224 )
-way = [ [ "down", "right" ], [ "left", "up" ] ]
+[node name="10" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(160, -224)
+way = [["down", "right"], ["left", "up"]]
 img = "downright"
 
-[node name="5" parent="Raisl" instance=ExtResource( 3 )]
-position = Vector2( 96, 416 )
-way = [ [ "down", "right" ] ]
+[node name="5" parent="Raisl" instance=ExtResource("3")]
+position = Vector2(96, 416)
+way = [["down", "right"]]
 img = "downright"
 
 [node name="player" type="Node2D" parent="."]
-position = Vector2( 96, -88 )
-script = ExtResource( 1 )
+position = Vector2(96, -88)
+script = ExtResource("1")
 going = "down"
 speed = 75
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-current = true
-smoothing_speed = 10.0
 
 [node name="touchy" type="Area2D" parent="player"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player/touchy"]
-polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
-[node name="Icon" type="Sprite" parent="player"]
-texture = ExtResource( 2 )
+[node name="Icon" type="Sprite2D" parent="player"]
+texture = ExtResource("2")
 
 [connection signal="area_entered" from="player/touchy" to="player" method="_on_touchy_area_entered"]

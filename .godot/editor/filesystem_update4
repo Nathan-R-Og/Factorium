@@ -1,0 +1,6 @@
+res://default_env.tres
+res://assets/rail;.tscn
+res://thing.gd
+res://Camera2D.gd
+res://Icon.gd
+res://Node2D.tscn

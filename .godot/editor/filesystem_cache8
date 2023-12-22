@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1703227120
+Camera2D.gd::GDScript::-1::1703227120::0::1::::<>Camera2D<>::
+default_env.tres::Environment::-1::1703227120::0::1::::<><>::
+Icon.gd::GDScript::-1::1703227120::0::1::::<>Node2D<>::
+icon.png::CompressedTexture2D::1544957637338922163::1703227084::1703227154::1::::<><>::
+Node2D.tscn::PackedScene::-1::1703227099::0::1::::<><>::res://Icon.gd<>res://icon.png<>res://assets/rail;.tscn
+thing.gd::GDScript::-1::1703227120::0::1::::<>Node2D<>::
+::res://assets/::1703227120
+rail;.tscn::PackedScene::-1::1703227099::0::1::::<><>::res://thing.gd<>res://img/downright.png<>res://img/upleft.png<>res://img/rightup.png<>res://img/leftdown.png
+::res://img/::1703227120
+downright.png::CompressedTexture2D::8082862676756202456::1703227084::1703227154::1::::<><>::
+leftdown.png::CompressedTexture2D::7374064939579102970::1703227084::1703227154::1::::<><>::
+rightup.png::CompressedTexture2D::9151855829814507875::1703227084::1703227154::1::::<><>::
+upleft.png::CompressedTexture2D::5759291260126510182::1703227084::1703227154::1::::<><>::

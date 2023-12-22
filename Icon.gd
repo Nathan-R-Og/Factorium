@@ -1,13 +1,13 @@
 extends Node2D
 
 
-export var going = "right"
+@export var going = "right"
 var b = Path2D
 
 var moving = true
 var there = false
-export var speed = 500
-var path = PoolVector2Array()
+@export var speed = 500
+var path = PackedVector2Array()
 var git = path
 var pathbank = []
 var lengthWaste = 320.0
@@ -41,7 +41,7 @@ func genDir():
 		"down":
 			pos1 = global_position
 			pos2 = global_position + Vector2(0, s.y)
-	path = PoolVector2Array([pos1,pos2])
+	path = PackedVector2Array([pos1,pos2])
 
 
 
@@ -60,7 +60,7 @@ func move_along_path(distance):
 			var distance_to_next = start_point.distance_to(path[0])
 			if distance <= distance_to_next and distance >= 0.0:
 				lengthWaste -= 1
-				global_position = (start_point.linear_interpolate(path[0], distance / distance_to_next))
+				global_position = (start_point.lerp(path[0], distance / distance_to_next))
 				break
 			elif distance < 0.0:
 				global_position = path[0]
@@ -69,7 +69,7 @@ func move_along_path(distance):
 				break
 			distance -= distance_to_next
 			start_point = path[0]
-			path.remove(0)
+			path.remove_at(0)
 			if path.size() == 0:
 				moving = false
 				there = true
