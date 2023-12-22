@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba0jp3pl03ys"]
+
+[ext_resource type="Script" path="res://assets/scenes/test/Conveyor.gd" id="1_12fey"]
+[ext_resource type="Texture2D" uid="uid://wanhx57c3qk6" path="res://icon.png" id="2_8v51i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2lum"]
+size = Vector2(64, 64)
+
+[node name="Conveyor" type="Area2D"]
+z_index = -1
+script = ExtResource("1_12fey")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_8v51i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k2lum")

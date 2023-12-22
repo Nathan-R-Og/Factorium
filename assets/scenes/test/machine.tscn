@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1627cq3wud81"]
+
+[ext_resource type="Script" path="res://assets/scenes/test/machine.gd" id="1_ypf1p"]
+[ext_resource type="Texture2D" uid="uid://wanhx57c3qk6" path="res://icon.png" id="2_xfuhk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2lum"]
+size = Vector2(2, 46)
+
+[node name="Conveyor10" type="Area2D"]
+modulate = Color(1, 0, 1, 1)
+z_index = 1
+script = ExtResource("1_ypf1p")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_xfuhk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Polygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, -23, -32, -23)
+
+[node name="Polygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(0, 55)
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, -23, -32, -23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k2lum")

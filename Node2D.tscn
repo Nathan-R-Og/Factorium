@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Icon.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://wanhx57c3qk6" path="res://icon.png" id="2"]
-[ext_resource type="PackedScene" uid="uid://co2abt44iog4m" path="res://assets/rail;.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://co2abt44iog4m" path="res://asset/rail;.tscn" id="3"]
 
 [node name="Node2D" type="Node2D"]
 

@@ -4,3 +4,11 @@ res://thing.gd
 res://Camera2D.gd
 res://Icon.gd
 res://Node2D.tscn
+res://asset/rail;.tscn
+res://assets/scenes/test/test.tscn
+res://assets/scenes/test/fakeTile.gd
+res://assets/scenes/test/Object.gd
+res://assets/scenes/test/Conveyor.gd
+res://assets/scenes/test/conveyor.tscn
+res://assets/scenes/test/machine.gd
+res://assets/scenes/test/machine.tscn

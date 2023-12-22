@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://berhgqgfwo25u"]
+
+[ext_resource type="Script" path="res://assets/scenes/test/Object.gd" id="1_oqa2m"]
+[ext_resource type="Texture2D" uid="uid://wanhx57c3qk6" path="res://icon.png" id="2_1l4dw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g234n"]
+size = Vector2(16, 16)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_oqa2m")
+
+[node name="Object" type="Area2D" parent="."]
+
+[node name="Icon2" type="Sprite2D" parent="Object"]
+modulate = Color(0.0156863, 1, 0.00392157, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_1l4dw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object"]
+shape = SubResource("RectangleShape2D_g234n")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g234n")

@@ -1,9 +1,9 @@
 extends Node2D
 
 
+
 @export var way = [[null, "up"]]
 @export var img = ""
-
 
 func _ready():
 	$AnimatedSprite.play(img)
