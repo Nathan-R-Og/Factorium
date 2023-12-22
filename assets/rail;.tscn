@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://thing.gd" type="Script" id=1]
+[ext_resource path="res://img/downright.png" type="Texture" id=2]
+[ext_resource path="res://img/upleft.png" type="Texture" id=3]
+[ext_resource path="res://img/rightup.png" type="Texture" id=4]
+[ext_resource path="res://img/leftdown.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "upleft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "downright",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "leftdown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "rightup",
+"speed": 5.0
+} ]
+
+[node name="1" type="Node2D"]
+script = ExtResource( 1 )
+way = [ [ "right", "up" ] ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "downright"
+
+[node name="touchy" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="touchy"]
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[node name="enterDir" type="Node2D" parent="."]
+
+[node name="right" type="Position2D" parent="enterDir"]
+position = Vector2( -32, 0 )
+
+[node name="left" type="Position2D" parent="enterDir"]
+position = Vector2( 32, 0 )
+
+[node name="up" type="Position2D" parent="enterDir"]
+position = Vector2( 0, 32 )
+
+[node name="down" type="Position2D" parent="enterDir"]
+position = Vector2( 0, -32 )
+
+[node name="exitDir" type="Node2D" parent="."]
+
+[node name="left" type="Position2D" parent="exitDir"]
+position = Vector2( -32, 0 )
+
+[node name="right" type="Position2D" parent="exitDir"]
+position = Vector2( 32, 0 )
+
+[node name="up" type="Position2D" parent="exitDir"]
+position = Vector2( 0, -32 )
+
+[node name="down" type="Position2D" parent="exitDir"]
+position = Vector2( 0, 32 )
